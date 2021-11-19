@@ -17,6 +17,6 @@ namespace AngularCSharpDDD.Domain.Entities
         public string Email { get; set; }
 
         public DateTime DataNascimento { get; set; }
-        public Escolaridade Escolaridade { get; set; }
+        public virtual Escolaridade Escolaridade { get; set; }
     }
 }

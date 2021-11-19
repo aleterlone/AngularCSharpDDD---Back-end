@@ -10,7 +10,7 @@ namespace AngularCSharpDDD.Infrastructure.Data.Contexts
 
         }
 
-        DbSet<Escolaridade> Escolaridade { get; set; }
-        DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Escolaridade> Escolaridade { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
     }
 }

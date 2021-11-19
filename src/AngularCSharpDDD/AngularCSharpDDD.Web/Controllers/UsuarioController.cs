@@ -63,6 +63,13 @@ namespace AngularCSharpDDD.Web.Controllers
         }
 
         [Produces("application/json")]
+        [HttpGet("GetById")]
+        public async Task<Usuario> GetById(int id)
+        {
+            return await _usuarioApplication.GetById(id);
+        }
+
+        [Produces("application/json")]
         [HttpPut("Update")]
         public async Task<bool> Update(UsuarioModel model)
         {

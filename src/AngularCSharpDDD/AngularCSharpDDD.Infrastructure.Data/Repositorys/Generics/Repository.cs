@@ -19,7 +19,7 @@ namespace AngularCSharpDDD.Infrastructure.Data.Repositorys.Generics
             _dbContext = dbContext;
         }
 
-        public async Task<TEntity> Add(TEntity entity)
+        public virtual async Task<TEntity> Add(TEntity entity)
         {
             try
             {
@@ -34,7 +34,7 @@ namespace AngularCSharpDDD.Infrastructure.Data.Repositorys.Generics
             }
         }
 
-        public async Task<bool> Delete(TEntity entity)
+        public virtual async Task<bool> Delete(TEntity entity)
         {
             try
             {
@@ -49,17 +49,17 @@ namespace AngularCSharpDDD.Infrastructure.Data.Repositorys.Generics
             }
         }
 
-        public async Task<List<TEntity>> GetAll()
+        public virtual async Task<List<TEntity>> GetAll()
         {
             return await _dbContext.Set<TEntity>().AsNoTracking().ToListAsync();
         }
 
-        public async Task<TEntity> GetById(int id)
+        public virtual async Task<TEntity> GetById(int id)
         {
             return await _dbContext.Set<TEntity>().FindAsync(id);
         }
 
-        public async Task<bool> Update(TEntity entity)
+        public virtual async Task<bool> Update(TEntity entity)
         {
             try
             {
